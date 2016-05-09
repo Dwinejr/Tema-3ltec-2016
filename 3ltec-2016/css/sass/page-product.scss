@@ -1,0 +1,172 @@
+.page-product{
+    
+    #ProdAbas{
+        
+        ul{
+            border-bottom: 1px solid #ccc;
+            
+            
+            &:after{
+                clear: both;
+                content: '';
+                display: block;
+            }
+        }
+    }
+    
+    #ProdBlock{
+        
+        li{
+            margin: 0;
+            padding: 0;
+            
+            @media screen and (max-width: 1024px){
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                border-top: 1px solid #ccc;
+                width: 100%;
+            }
+            
+            a{
+                line-height: 30px;
+                padding: 0 15px;
+            }
+            
+            &.aberta{
+                height: auto;
+                margin-bottom: -1px;
+                
+                @media screen and (max-width: 1024px){
+                    margin: 0;
+                }
+            }
+        }
+    } 
+    
+    .comprejunto{
+        margin-top: 50px;
+        
+        > .container{
+            padding: 0;
+        }
+        
+        #ProdAbas{
+            
+            ul{
+                padding: 0;
+            }
+            
+            li{
+                
+                &.aberta{
+                    background: #fff;
+                    border-left: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    border-top: 1px solid #ccc;
+                    margin: 0 0 -1px;
+                    padding: 0;
+                    
+                    a{
+                        padding: 5px 20px;
+                    }
+                }
+            }
+        }
+        
+        .prodBox{
+            border-bottom: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+        }
+        
+        .compreJunto{
+            
+            > li{
+                border: none;
+            }
+            
+            .precoCompreJunto{
+                border-left: none;
+                padding: 0;
+            }
+            
+            @media screen and (max-width: 1024px){
+                .fotosCompreJunto{
+                    width: 100%;
+                    
+                    .produto{
+                        width: 48%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .products-related{
+        margin-top: 50px;
+        
+        .related-title{
+            background: #fff;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            display: inline-block;
+            margin: 0 0 -1px;
+            padding: 5px 20px;
+            text-transform: uppercase;
+        }
+        
+        .list-related{
+            border: 1px solid #ccc;
+            padding: 30px;
+        }
+    }
+    
+    .footer{
+        margin-top: 50px;
+    }
+    
+    .product-links{
+        margin-top: 30px;
+        
+        > span{
+            padding: 5px 0;
+        }
+    }
+    
+    #info{
+        display: none;
+    }
+    
+    .ranking{
+        border: none;
+        
+        @media screen and (max-width: 1024px){
+            margin-top: 20px;
+            
+            > span:first-child{
+                display: block;
+                float: none;
+            }
+        }
+    }
+    
+    #info_preco{
+        
+        > br:first-child{
+            display: none;
+        }
+    }
+    
+    .product-id{
+        float: none;
+        display: block;
+        margin: 15px 0;
+    }
+    
+    .produto-calcular-frete{
+        @media screen and (max-width: 1024px){
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+/* PAGE CART - INICIO*/
+.AvancarTopo{
+    display: none;
+}
+
+.page-checkout_cart .Seguro{
+    margin: 10px 0 0;
+    position: static;
+    text-align: right;
+}
+
+    .page-checkout_cart .Seguro img{
+        position: static;
+    }
+    
+.page-checkout_cart .tit-total{
+    display: none;
+}
+
+.page-checkout_cart .caixa-total h3 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.page-checkout_cart .refresh{
+    background: url('../img/refresh.png') no-repeat center;
+    height: 24px;
+    width: 24px;
+}
+    
+    .page-checkout_cart .refresh img{
+        display: none;
+    }
+    
+.page-checkout_cart .bt-excluir{
+    background: url('../img/close.png') no-repeat center;
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+    
+    .page-checkout_cart .bt-excluir img{
+        display: none;
+    }
+    
+.page-checkout_cart .qntd{
+    background: none;
+    height: 30px;
+    width: 40px;
+}
+
+.page-checkout_cart .qntdEstoque{
+    display: none;
+}
+
+.page-checkout_cart #tabela_carrinho td:nth-child(4) {
+    text-align: center;
+}
+    
+.page-checkout_cart .caixa-produto + .container{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    .page-checkout_cart .caixa-forma-frete th {
+        border: none !important;
+        padding: 0 !important;
+    }
+    
+    .page-checkout_cart .caixa-frete{
+        display: none;
+    }
+    
+    .page-checkout_cart .caixa-forma-frete .carFretePara {
+        color: #000;
+    }
+    
+    .page-checkout_cart #formas_envio_frete{
+        overflow: hidden;
+    }
+    
+    .page-checkout_cart #formas_envio_frete td {
+        width: 50%;
+    }
+    
+    .page-checkout_cart #formas_envio_frete td:last-child{
+        display: none;
+    }
+    
+    .page-checkout_cart #formas_envio_frete .valores_carrinho{
+        padding: 0;
+    }
+    
+    .page-checkout_cart #formas_envio_frete .margem_imagem_frete{
+        display: none;
+    }
+    
+    .page-checkout_cart .caixa-forma-frete > table > tbody > tr > td > h3 {
+        display: none;
+    }
+    
+    .page-checkout_cart .caixa-total th{
+        padding: 0 !important;
+        border: none !important;
+    }
+}
+
+/* PAGE CART - FIM*/

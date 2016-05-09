@@ -1,0 +1,869 @@
+<style media="screen">
+/* =Locastyle fixes */
+.ls-list .ls-list-content [class*="col-"] {
+border-left: 0;
+}
+.page-offers .nav-tabs li:first-child {
+margin-left: 0;
+}
+.spa{margin-bottom: 3%;}
+.titulo{background: #F7F7F7 none repeat scroll 0% 0%;
+height: 40px;
+float: left;
+font-family: "open_sans_semibold";
+font-size: 12px;
+text-transform: uppercase;
+line-height: 37px;
+border-radius: 6px;
+margin-bottom: 15px !important; }
+.titulo2{background: #F7F7F7 none repeat scroll 0% 0%;
+height: 40px;
+float: left;
+font-family: "open_sans_semibold";
+font-size: 12px;
+text-transform: uppercase;
+line-height: 37px;
+border-radius: 6px;
+margin: 39px 0 17px 0 !important;
+width: 89%;}
+/* =Icons */
+.ls-list-header [class*='ico-']::before {
+font-size: 3em;
+}
+.full{width: 100%!important;}
+/* =Tooltip */
+.tooltip.left .tooltip-inner {
+background-color: #0A90CF ;
+}
+.tooltip.left .tooltip-arrow {
+border-left-color: #0A90CF;
+}
+/* =Tons Colorpicker
+---------------------------------------------------*/
+.tons div{
+margin: 0 0 5px;
+}
+.tons label{
+font-size: 0.73em;
+font-weight: normal;
+color: #777777;
+}
+.no-padding{
+padding-left: 0;
+}
+.padding-right{
+padding-right: 10px;
+padding-left: 0;
+}
+/* =Upload Logo
+---------------------------------------------------*/
+.logo{
+margin: 0 0 40px;
+}
+.upload-logo{
+}
+.upload-logo .file{
+}
+
+.img-thumbnail{
+width: auto !important;
+clear:both;
+}
+/* =Estrutura
+--------------------------------------------------*/
+.estrutura label > input{
+display:none;
+}
+.estrutura svg {
+cursor:pointer;
+border:2px solid #bbb;
+}
+.estrutura svg g {
+fill: #bbb;
+}
+.estrutura input:checked + svg {
+border:2px solid #555;
+}
+.estrutura input:checked + svg g{
+fill: #555;
+}
+/* =Fontes
+-----------------------------------------------*/
+.fontes [value="font-averia"], .font-averia{
+font-family: "Averia",sans-serif;
+}
+.fontes [value="font-amaranth"], .font-amaranth{
+font-family: 'Amaranth',sans-serif;
+}
+.fontes [value="font-asap"], .font-asap{
+font-family: "Asap", sans-serif ;
+}
+.fontes [value="font-exo"], .font-exo{
+font-family: 'Exo',verdana,tahoma,arial,sans-serif;
+}
+.fontes [value="font-lato"], .font-lato{
+font-family: 'Lato',verdana,tahoma,arial,sans-serif;
+}
+.fontes [value="lora"], .font-lora{
+font-family: 'font-font-Lora',sans-serif;
+}
+.fontes [value="font-maven-pro"], .font-maven-pro{
+font-family: 'Maven Pro',sans-serif;
+}
+.fontes [value="font-nunito"], .font-nunito{
+font-family: 'Nunito',sans-serif;
+}
+.fontes [value="font-ubuntu"], .font-ubuntu{
+font-family: 'Ubuntu',verdana,tahoma,arial,sans-serif;
+}
+.fontes [value="font-verdana"], .font-verdana{
+font-family: 'Verdana',tahoma,arial,sans-serif;
+}
+/* Select */
+.fontes{
+margin: 20px 0;
+}
+.fontes span{
+display: block;
+margin: 0 0 5px;
+}
+/* Box */
+.fontes-box{
+background:#EEEEEE;
+border: 1px solid #ccc;
+}
+.fontes-box span{
+display: block;
+padding: 5px;
+}
+.fontes-box span:nth-child(odd){
+background: #ddd;
+}
+.fontes-box label{
+cursor: pointer;
+display:block;
+padding: 2px;
+font-family: inherit;
+font-weight: normal;
+}
+.fontes-box input[type="radio"] {
+display: none;
+}
+.fontes-box input[type="radio"]:checked + label {
+background: #25ABD1;
+color: #fff;
+}
+.modal-title{
+visibility: hidden;
+}
+/* =Estrutura
+-------------------------------------- */
+.tab-content{
+position: relative;
+}
+input:checked ~ a .img-thumbnail {
+background:#ccc;
+opacity: 0.3;
+}
+.cores-estrutura{
+/*margin: 0 0 10px;*/
+}
+.check-color{
+  margin-top: 13px;
+}
+.imagem-estrutura{
+}
+.imagem-estrutura img{
+position: absolute !important;
+top: 70px;
+right: 135px;
+max-height: 130px;
+max-width: 175px;
+}
+.position-initial{
+position: initial;
+}
+.position-checkbox{
+position: absolute;
+right: 285px;
+bottom: 20px;
+}
+.position-label{
+position: absolute;
+right: 135px;
+bottom: 13px;
+}
+/*links*/
+li{list-style: none;}
+.link-titulo{font-family: "open_sans_semibold";
+font-size: 12px;
+width: 100%;
+float: left;
+margin-top: 7px;}
+.link_link{width: 43%;
+float: left;
+background: #F0F0F0 none repeat scroll 0% 0%;
+border-radius: 0px;
+border: 0px none;
+margin: 8px 3% 10px 0px;}
+.link_texto{width: 43%;
+float: left;
+background: #F4F9FB none repeat scroll 0% 0%;
+border-radius: 0px;
+border: 0px none;
+margin: 0px 3%;
+margin: 8px 3% 10px 0px; }
+/*links*/
+</style>
+
+<div class="container2">
+    
+    <input type="hidden" name="class_name">
+    
+    <!-- cores -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <!-- http://www.flaticon.com/free-icon/paint-palette_86935 -->
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAFhklEQVR4Xu1b3XHbOBBeaKTn+Co4p4KzK4hdwSlj4PmSCuJUcEkFiSs45xnQRKkgVgWnVBC5gjs/g/befBxQIUVS+CElU+fgySPjZ/Fh/3cp6IkP8cTvT3sDQCn1gpmPiOikBPqZ+/um9NtSCHGrtV7u43F2BoBS6oSZfyeiMyFEcdGoOzEzgLkRQnzZFSC9AjCdTo/H4/EbIcSUiI6jbuufvGLmeZZlV/P5fOWfHjajFwCklHjlP4joVdixnWddE9FVH1zRCQC8+GQy+UBEePHHGHNr7dsuHJEMgJTyTyK6FEJAsT3aYOZ/ieijMeZ9ChHRAEyn06PxePw5VbGlEBmyBgozy7KX8/kcgASPKAAg60SEyz/qq7fdDtwghDiP0Q3BACiloOD+Cob2cSe+1lpDUXpHEAAHdvni0kEgeAE40MsHg7AVgIuLi+loNPrs5aMBT2Dmc2NM2dWuUNsKgHNlv/ak8BbQ0sy8HI1GUKTQJ8/2gZtPMW4D4O+NwCWJXmZ+b4x5V17sHKg5Ef2WtGn8oqXW+rRpWSMASqmPRPQm/pzaioXWujEQAocREUDe14DrfLl5WA0A59d/7YMqZn5rjAGYjUNKuRJC/Oo7i5m/wNvDPCHEMTO/C1nXsO/ppo/QBADkPil83Tzw4eHh5Ww2A6s3DqUUlNMLDwA1cwZvdDKZYF/f2srW0EPGmPPyjxUA+jZ5TfJfPlwpxdsuj5c3xjQGWk6PfPdxT8P/K4BuAoANe4vjoYGzLHve5J9LKcHGCKhah0+ElFLIGsUq0pXW+nlx6BqAHdp8EAnU1ykuRJJCiIplaEFhqzcXKEK1rcu+wRoAKeVcCIEU1q7G0oWuJxG+RaPmBoFOD/yTQmxZtHIAOshTyvmxa2qaGxt0NdXW2l8gmjkAUkokNpDZGdwA1zDz5Ww2+1S8/Hg8hgjVbHoM8YV+yQFIlaWYA/uY69zavnIRuZNWALDVHPVB/BD30FoL0afnN8RLeszsOQDw2uNDu1govXDURFdtGnrYQOddAYAQf3yg9HcmawEAenV/O5OUtsEdEcHThIWIcY2XAODQLcA3a+1ZEW/E6rT/AwA1TzEmSDp4AGDLN6UmRq8dPAAu0lwXQVzp7ntowHXwAJRjBZfJ/hCR0br7aQZj5CXNQg161eKnKzzkXMAeeOc1dMC+CxR7uFfwEadFPgBdFXup1QWT9mMi3NxrdIjhJ1cYmfaQv7zTWh8VKbFdJ0QT7p0vqbi55U1cFhv2P+nhmPmTMeZVDsAOU+KpFydmvs2y7GRbz08Xuouq1dqNVEp1EgMQjOSlEAJp760Fj0BUgjo8Yvz+0rk5++ciVfwopbx2zY6B9FWnlctgfZTYirS1j5jY6A/7FexfAaBrbWCz8NgVhKYgpwmMlHOstSjX5e22lUiqh+pQpZKTQlxxyV1xQPn1awD04ROU0cUBHUAI0gFSythyfiV/0NQf0FUX1JoiEkFYWWtPt1mBhJR+rdZYA8AVHSEfSfaViBrbYlJA2Nb+mtDEdWetPd4EtLFHqIt9bQOggzjgMdAeg+oy6H3mvkeIas1v61Zp7RJLNYubSqYhXbX3ltttNLUC4EQBNYOYNDP5+oI6cILPJWj7f6s7XbMCmzu4/Bo+YvJ2cjkH49YYE9Rik6ITYhEIcadDeoURLoMTQpRiYzNDG+E7BgFR5Jmvdd4LgGNZgIDIq00cgg7ry5ML4IRvaMf1Xd4rAk0KjJnRtlb0+UAz40uu69gvNcp7OwcslMt8919Ya6eh9ARxgO/EPv7vlC46x5JadCHv6DwL/VCioHkwABQEuaDsEpwWqHwXEM/Yiw8WgDI3uQ8xIXJHqPQwMyxM3m+I1vv7+/ubUFZv49LBcUAf4hSzx5MH4D+wnfmiC5pNSQAAAABJRU5ErkJggg=="  width="48" height="48">
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Cores e fonte</h2>
+                    <small>Escolha as principais cores e a fonte da sua loja</small>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="col-md-12 tons">
+                    <div class="row">
+                        <div class="titulo col-sm-12">Topo</div>
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_1" class="form-control" type="text" id="color_tone_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_1">
+                            Links Superiores: Escolha a cor dos links superiores no layout.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_16" class="form-control" type="text" id="color_tone_16">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_16">
+                            Fundo Logotipo: Escolha a cor do fudo do logotipo.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_3" class="form-control" type="text" id="color_tone_3">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_3">
+                            Carrinho: Escolha a cor do seu carrinho.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_19" class="form-control" type="text" id="color_tone_19">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_19">
+                            Carrinho:Escolha a cor de fundo do seu carrinho.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_4" class="form-control" type="text" id="color_tone_4">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_4">
+                            Botao:Escolha a cor do Botao de busca.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_100" class="form-control" type="text" id="color_tone_100">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_100">
+                            Mobile: Escolha a cor de fundo do cabe&ccedil;alho.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="titulo col-sm-12">Menu</div>
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_5" class="form-control" type="text" id="color_tone_5">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_5">
+                            Menu: Escolha a cor da font no menu.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_18" class="form-control" type="text" id="color_tone_18">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_18">
+                            Menu: Escolha a cor de fundo do seu menu.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_6" class="form-control" type="text" id="color_tone_6">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_6">
+                            Menu: Escolha a cor do seu menu quando houver o mouse sobre ele.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="titulo col-sm-12">Vitrine</div>
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_7" class="form-control" type="text" id="color_tone_7">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_7">
+                            Vitrine: Escolha a cor do pre&ccedil;o de seus produtos
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_8" class="form-control" type="text" id="color_tone_8">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_9">
+                            Vitrine:Esolha a cor das parcelas do produto e dos textos de "Lan&ccedil;amentos" e "Super Ofertas".
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="titulo col-sm-12">newslleter - rodap&eacute; </div>
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_9" class="form-control" type="text" id="color_tone_9">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color_tone_10">
+                            Newslleter: Escolha a cor da barra da newslleter. 
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_14" class="form-control" type="text" id="color_tone_14">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color">
+                            Newslleter: Escolha a cor do botao de enviar.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 no-padding">
+                            <div class="input-group colorPicker colorpicker-element">
+                                <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                <input name="color_tone_60" class="form-control" type="text" id="color_tone_60">
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <label for="color">
+                            Quem somos: Escolha a cor do t&iacute;tulo e do texto.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            Esolha a imagem de fundo da Newslleter
+                        </div>
+                        <div class="col-md-8">
+                            <label for="barra_image">Em imagem:</label>
+                            <div class="input-group file">
+                                <span class="input-group-addon">
+                                <input type="radio" name="image_radio" value="image">
+                                </span>
+                                <input type="file" class="form-control" id="barra_image" name="barra_image">
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="titulo col-sm-12">Titulo - rodap&eacute;</div>
+                        <div class="row">
+                            <div class="col-sm-3 no-padding">
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_15" class="form-control" type="text" id="color_tone_15">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <label for="color">
+                                Titulo dos links do rodap&eacute;
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 no-padding">
+                                <div class="input-group colorPicker colorpicker-element">
+                                    <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                    <input name="color_tone_10" class="form-control" type="text" id="color_tone_10">
+                                </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <label for="color">
+                                Textos: Links e textos no rodap&eacute;
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- logotipo -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image"><span class="ico-image"></span> </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Logo</h2>
+                    <small>Escolha a logo para ser exibida em texto ou em imagem</small>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="col-md-4">
+                    <label for="logo_text">Em texto:</label>
+                    <div class="input-group vspace-xs">
+                        <span class="input-group-addon">
+                        <input type="radio" name="logo_radio" value="text"/>
+                        </span>
+                        <input type="text" class="form-control" id="logo_text" name="logo_text" />
+                    </div>
+                    <!-- /input-group -->
+                    <label for="color_text_logo">Cor:</label>
+                    <div class="input-group colorPicker colorpicker-element">
+                        <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                        <input name="color_text_logo" class="form-control" type="text" id="color_text_logo"/>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <label for="logo_image">Em imagem:</label>
+                    <div class="input-group file">
+                        <span class="input-group-addon">
+                        <input type="radio" name="logo_radio" value="image">
+                        </span>
+                        <input type="file" class="form-control" id="logo_image" name="logo_image">
+                    </div>
+                    <!-- /input-group -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- links extras -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACk0lEQVRYR71W7VHCQBQ0DPzWErQCtQKxAuMAv4UKkArQCqQD4m9gjBWIFQgVaAfKb77czSSZl/PucgkZb4bRJHf79va9t3feUYXD9/2TRqNxB8jmfr9vep53gr8/eF7g/3C9Xj+HYcjndHhVxe90Ol0Ee2JQEybJ4PtgMpkEyZxKCLTb7SGAH1w3AyKP0+k0mn8wAex8DJyua3Axr0clDiJgCb7ELinzAr8LqEOC55Ik07HZbM5KEzAFl/LKgEhTACIs0HRg7qAUAcvOI1lN6cA6KpIqAQKvpQjIAGi9U7Rec7fb/cxms9BWC1DhHio8JXOirihRPKWXgAC94U0COBMwmQwA5wCc60xGZQoCD5g/FO9XTgRarZaPheM8k4GkPVsaUAMf7AqRgvwaKGoyANcWInDokveFuqCsyaAgb6USBpwV0nZqTIGjybCofNVkpAomnISklsCBJpOmwAXnDwEXk2FHqMdqbDKjxIgswZ9xENGao5Eh4BI8nnOBQJeKIaWkXINnCGh6NME3SRqARE/t9SLBUwK8TOCBx6o6ZPARPvaVCQv0fkgzim9ALMi0z0W/Z2SXGB7zWa/XPzUmk+lnmlGtVnvRkLS+AjFj8EgB9YDgS9ORalFKS8KEk1EAoHO8uBIvl8jtHxmT77ESAZ6PLVtfoc+7eadjosC3lJ+XBLQJ820ccdpYNzSiZkxmhbXczBw3nUBtUxOYBwX28iNArkGAQP8ySID39FROFwWwps8LyHa7fcdOvw5hyiJkG90IkIVqMjJA0T7PI6ftAiyqxGTygkdFGN90KKNa1bxABvhFV2v8WHSFTMaJACcV7e8EOM9knAlwouUs0OK4mEwhAkIJekAlJlOYABdUaTIuBH4BlcjDOAM7WgMAAAAASUVORK5CYII="/>
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Links Adicionais rodap&eacute;</h2>
+                    <small>Escolha os links Adicionais como, Blogs , Noticias etc...</small> 
+                    <div>
+                        <h4 style="margin: 15px 0 5px">Exibir no rodap&eacute;</h4>
+                        <select class="redeon" id="exibe_links" name="exibe_links">
+                            <option value="">Selecione</option>
+                            <option value="true">Exibir</option>
+                            <option value="false">Ocultar</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="links">
+                    <ul>
+                        <li>
+                            <div class="titulo2 col-sm-12">Links </div>
+                        </li>
+                        <li>
+                            <span class="link-titulo">Titulo links </span>
+                            <span class="link-texto">
+                            <input type="text" class="form-control link_link" id="titulo_extras" name="titulo_extras" placeholder="Coloque o titulo dos links personalizados"/>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="link-titulo">Link 1</span>
+                            <span class="link-texto">
+                            <input type="text" class="form-control link_link" id="extra_links" name="extra_links" placeholder="http://www.tray.com.br"/>
+                            </span>
+                            <span class="texto">
+                            <input type="text" class="form-control link_link" id="texto_extra_links" name="texto_extra_links" placeholder="Esse &eacute; o link da Tray"/>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="link-titulo">Link 2</span>
+                            <span class="link-texto">
+                            <input type="text" class="form-control link_link" id="extra_links2" name="extra_links2" placeholder="http://www.tray.com.br" />
+                            </span>
+                            <span class="texto">
+                            <input type="text" class="form-control link_link" id="texto_extra_links2" name="texto_extra_links2"  placeholder="Esse &eacute; o link da Tray" />
+                            </span>
+                        </li>
+                        <li>
+                            <span class="link-titulo">Link 3</span>
+                            <span class="link-texto">
+                            <input type="text" class="form-control link_link" id="extra_links3" name="extra_links3"  placeholder="http://www.tray.com.br"/>
+                            </span>
+                            <span class="texto">
+                            <input type="text" class="form-control link_link" id="texto_extra_links3" name="texto_extra_links3"  placeholder="Esse &eacute; o link da Tray" />
+                            </span>
+                        </li>
+                        <li> 
+                            <span class="link-titulo">Link 4</span>
+                            <span class="link-texto">
+                            <input type="text" class="form-control link_link" id="extra_links4" name="extra_links4" placeholder="http://www.tray.com.br" />
+                            </span>
+                            <span class="texto">
+                            <input type="text" class="form-control link_link" id="texto_extra_links4" name="texto_extra_links4"  placeholder="Esse &eacute; o link da Tray" />
+                            </span>
+                        </li>
+                        <li>
+                            <span class="link-titulo">Link 5</span>
+                            <span class="link-texto">
+                            <input type="text" class="form-control link_link" id="extra_links5" name="extra_links5" placeholder="http://www.tray.com.br" />
+                            </span>
+                            <span class="texto">
+                            <input type="text" class="form-control link_link" id="texto_extra_links5" name="texto_extra_links5"  placeholder="Esse &eacute; o link da Tray" />
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- formas de entrega -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABjklEQVRYR+1Xy23CQBTMHuwrSQGRKMF04A68ku07FaClA6eCJBXA3ZZiKQVgpQGgA0pIzrbkzFvZEQH2g2KsHHal5YCHmXmzi/weu7NYaZoGgE0soFdDmOkXEH8BJmjbtjJgA8ZYCBzhTUtiqSilAc75ved5GxDui6KY6xiTJCGyNUh5nuc7HRYFERdtgb29aIAih/AGhEsQri0IRV3XvCzLgyU2BPYTOu2ZAVQjIJyBKLSshsQl4TXihP1loIv8Gd/PbAhhNKPILbEyxaZpxLHRHwMQn+K832zOm4ggLglNd8OElQbiOOaoZAXwEwiNN9hWvEt0haK+VEalAfrQnd1fnkF8qSuqN1DhstHfaNAF8goGMhioVMTOgDGBKIoefd//UEWIiN8R8eLSc3cELgGXgEvAJfDvE+iaU0H9wOiv4+N2bnQDpx3VaAZULdooBvohB6/t19M54+YG0PDSvEBN75k49RG3NlBCgwYd5cjGcCkOncNBm1KIzkH4gK2dsMjA4B1xXwkmoZ1pZPsGpEPeESzwl3QAAAAASUVORK5CYII="/>
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">formas de entrega</h2>
+                    <small>Escolha a imagem das formas de entrega em que voc&ecirc; trabalha </small>
+                    <div>
+                        <h4 style="margin: 15px 0 5px">Exibir no rodap&eacute;</h4>
+                        <select class="redeon" id="exibe_envio" name="exibe_envio">
+                            <option value="">Selecione</option>
+                            <option value="true">Exibir</option>
+                            <option value="false">Ocultar</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="col-md-12 tons">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <label for="logo_image">Imagem:</label>
+                            <div class="input-group file">
+                                <input type="file" class="form-control" id="img_entrega" name="img_entrega">
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- redes sociais -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACv0lEQVRYR7VX7W3iQBCNEfw+roIjFVyoILgCHAG/j1QQroJLKrhQwZnfgOJUEFLB0cG5g/AfhO+91a61ON4vS17JMoL5eDOzM/OIruRJkqTf7XYfoiia46sBnj2edL1eL5VMk/d0Ol3A5g/o3uDJi6JIT6fTMsuyA+1FyigEHyH4q8bJPUCkTZzPZjMG86eqCxBPm83m8QIAhBnx9xpH7wAwaghgB73bGt09bA6rAAqDkzYAXAGAyH5ZAmSgFi3S9Yp0JU0ygLJmKOvYllUdgKleMQAQXPABgBEAvNnuVQmAQlTAaw6lASLP8Tlt6lw5ddmsAlhAcQwAfbzz8/m82m63WXDomsJkMkk6nQ7bkEEdYDvTW1sA4Azo9XpMFXu1eqhw1wQEok/lDKiq74/HY8xZIADgAj7j9WByAuQ/UQrKeB85gH5bFJYIbKEAmFpQ6Zd964vA1FVKn+VAUF8jCDLtf12GVd+65NTvsOsKiqLDyNIqF77aAIAsxN4AgMZ7J5h2QDV7AoBPSjWDThCarLhkLvteACqdYgShyonIVrhgc5dz/u4NQIIwbczSV+juCAWwg6e69aoDKHd9cAZISugA02uESHZkLxjFK621ggHwTsCOYkTM4A7leVI2nYwI++BO7QPXcKFRne3IPfBSc/ubMaJQAKF8wMmIfAAg2nJ52eSDGZE2sn3aUJCY0Aywb+sYrDAmoyGXG9luN+VwDwroxMGMSF4aMb24rfB6lpEIasXR6WJI1UxJRsT/Bn3alJ1VkpyLOSDH6BhCfSgc0AEZ2xBGcoDZ+5JTSURuQTqGIDoktJ9sfmpDy4Vh797A2DUYDIE4j2RYlP3AM6hpQ86CmN/7MiLv2a4NLSvLgtwFI2K9v1hCy3H5rp2hawIsG8r4zaRTMiKka4A6/XMZb4OQsKzehKQNAEGMqC0A/wGfouxfeigqEAAAAABJRU5ErkJggg=="/>
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Redes Sociais</h2>
+                    <small>Escolha a op&ccedil;&atilde;o de exibir ou ocultar esta rede social.</small>
+                    <div>
+                        <h4 style="margin: 15px 0 5px">Exibir no rodap&eacute;</h4>
+                        <select class="redeon" id="exibe_social" name="exibe_social">
+                            <option value="">Selecione</option>
+                            <option value="true">Exibir</option>
+                            <option value="false">Ocultar</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="col-md-12 tons">
+                    <div class="row">
+                        <ul>
+                            <li>
+                                <div>
+                                    <span>Escolha a op&ccedil;&atilde;o de exibir ou ocultar esta rede social.</span>
+                                    <div class="row">
+                                        <select class="redeon" id="redeon1" name="redeon1">
+                                            <option value="">Selecione</option>
+                                            <option value="true">Exibir</option>
+                                            <option value="false">Ocultar</option>
+                                        </select>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                            </li>
+                            <li class="spa">
+                                <span class="link-titulo">Youtube </span>
+                                <div class="row">
+                                    <div class="col-sm-3 no-padding">
+                                        <div class="input-group colorPicker colorpicker-element">
+                                            <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                            <input name="color_tone_11" class="form-control" type="text" id="color_tone_11">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <label for="color" class="col-md-12"> 
+                                        <span class="link_rede">
+                                        <input type="text" class="form-control link_texto full" id="link_rede1" name="link_rede1" placeholder="Coloque a url de sua rede social."/>
+                                        </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <div>
+                                    <span>Escolha a op&ccedil;&atilde;o de exibir ou ocultar esta rede social.</span>
+                                    <div class="row">
+                                        <select class="redeon" id="redeon2" name="redeon2">
+                                            <option value="">Selecione</option>
+                                            <option value="true">Exibir</option>
+                                            <option value="false">Ocultar</option>
+                                        </select>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                            </li>
+                            <li class="spa">
+                                <span class="link-titulo">Twitter </span>
+                                <div class="row">
+                                    <div class="col-sm-3 no-padding">
+                                        <div class="input-group colorPicker colorpicker-element">
+                                            <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                            <input name="color_tone_12" class="form-control full" type="text" id="color_tone_12" >
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <label for="color" class="col-md-12">
+                                        <span class="link_rede">
+                                        <input type="text" class="form-control link_texto full" id="link_rede2" name="link_rede2" placeholder="Coloque a url de sua rede social."/>
+                                        </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <div>
+                                    <span>Escolha a op&ccedil;&atilde;o de exibir ou ocultar esta rede social.</span>
+                                    <div class="row">
+                                        <select class="redeon" id="redeon3" name="redeon3">
+                                            <option value="">Selecione</option>
+                                            <option value="true">Exibir</option>
+                                            <option value="false">Ocultar</option>
+                                        </select>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                            </li>
+                            <li class="spa">
+                                <span class="link-titulo">Instagram</span>
+                                <div class="row">
+                                    <div class="col-sm-3 no-padding">
+                                        <div class="input-group colorPicker colorpicker-element">
+                                            <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                            <input name="color_tone_13" class="form-control full" type="text" id="color_tone_13" >
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <label for="color" class="col-md-12">
+                                        <span class="link_rede">
+                                        <input type="text" class="form-control link_texto full" id="link_rede3" name="link_rede3" placeholder="Coloque a url de sua rede social." />
+                                        </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <hr>
+                            <li>
+                                <div>
+                                    <span>Escolha a op&ccedil;&atilde;o de exibir ou ocultar esta rede social.</span>
+                                    <div class="row">
+                                        <select class="redeon" id="redeon4" name="redeon4">
+                                            <option value="">Selecione</option>
+                                            <option value="true">Exibir</option>
+                                            <option value="false">Ocultar</option>
+                                        </select>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                            </li>
+                            <li class="spa">
+                                <span class="link-titulo">Google plus</span>
+                                <div class="row">
+                                    <div class="col-sm-3 no-padding">
+                                        <div class="input-group colorPicker colorpicker-element">
+                                            <span class="input-group-addon"><i style="background: rgb(204, 0, 0);"></i></span>
+                                            <input name="color_tone_20" class="form-control" type="text" id="color_tone_20">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <label for="color" class="col-md-12">
+                                        <span class="link_rede">
+                                        <input type="text" class="form-control link_texto full" id="link_rede4" name="link_rede4"  placeholder="Coloque a url de sua rede social."/>
+                                        </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- page plugin -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABe0lEQVRYR+2XUU6DQBCGZ+DNF/UEeoT23VB8VDQuJ9AjeAPpTeoJuokSX7H1XY/gEdwDsOMsijZAWuguGiP7AMkGZr75d3Yyg/C5QvFwSKBvAEgA4l657/RN9AaAEsGbZvLk1dhG8zgSd6EPOO/NcTUKBsmB4id5nuFH5PnzjzkvYRgCwR9jIO5niHjpVOqWxojoFidxyucCuy3/cfuZUYEByK1VUGzwpWqTk23UFKhLAKUJrpcymjUFFMRpxhCTGpgjBRQShJmMapGXDnsFYOfjdc4NRG8AJpMX8uxqUx71BqAJ46U8lb8GgLSzn8ljc5W/FkfL5RYuNkEVpdg2CR/nUVHOV1cXm38PgAimq9EuZJRUFQhEWttDBJOoB9Z1oEnyNmft7BYMAIMC1YT7f3VgUGBQoA8FrNpyy2uorAcTG4BiMClGM9Smm91qOLEA4E7aG30Pp+iZvq4zxJYAKictiuG0TCqjhIY84TlRdAHpCKBYdumBn5Tj+TsmNP7yyxhsbQAAAABJRU5ErkJggg=="/>
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Page Plugin</h2>
+                    <small>Coloque aqui seu codigo do facebook </small>
+                    <b>N&atilde;o sabe como gerar o c&oacute;digo? <a href="https://developers.facebook.com/docs/plugins/page-plugin" target="_blank">Clique aqui</a></b>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="col-md-12 tons">
+                    <div class="row">
+                        <textarea name="like_box" class="form-control" type="text" id="like_box"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- depoimentos -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACgklEQVRYR8VX21HCQBR1GfhWKxArECvQDgwDfBsqECsQKxArUL+BMXYAFQgVGCtQv2HAc9YNswm7SVYTzBdDdu85995zHxF7//wIV/xOp9PAnf3FYvEeBEHoej95PpWA53n1Wq12sV6vPVxsCCEODIAkMVmtVpPxePzkSshIQHl5BWO+i0EQ/cT5wXK5vEd0+Dvz2SLQbrf78PQm82b6gRBkuqPRaJJlJ0YA4I8Av8y65PC+OxwOH9PObwiUAC5xoY0mtBHYSEgCAO/B8zsHz3IfpS6giWObJgSUflCtVt8sCs8NlHYQJJ6gB6OgBRTPFw+FIKUYQd84NEWBBKjUs7IJIArXiMIgiSOQ/xDhP9oBgVsQ6DPleiQYgXXZ4LQf6QAOn7PUUZ5d/r/zCLRaLa9SqTxHKdm5BqJOq8rzlBEorQfoqUUVsBeEesNjFGQfwMQLcXi/LC0A6AUCBJTE+tBwplEnLGIA2fh/wfsGvU/2HKZBnwUB1HlRQhTkQLJ13A0BFR42pZMCSWymIXJvcvAnBfpT0FT8whT0oylos8neYNuIft2caBTTrxd1uzSHWBlbBNQ69uqYhimAAwAD92dR5T6JKfsAXZ1bbN1DGz2XlWwOkF7SWHLtUmLjPsn+YlpiaWIOcG7XezECKaNZsrVFRYGeAZDbs58WPfYERMqPUqSX4VYvkCIRYgDwmW5UVUwf70+Ul9KbHM/G8+isJKDy7qu1muv0LGujVV77IECP85buFM7ENOH8ZWTzkmNW5lSIOhyhEPkhE9szTfthYQRMxBQprvr6whMgCs1YCnLk7k9HlLiZKvldyRSjBzRZsqVGwMRaaaeBSpixEnZOIEnqG4UEYb8xixyDAAAAAElFTkSuQmCC"/>
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Campo de depoimento</h2>
+                    <small>Escolha se quer exibir ou ocultar o campo de depoimento na sua loja</small>
+                </div>
+            </header>
+            <div class="ls-list-content">
+                <div class="col-md-12 tons">
+                    <div class="row">
+                        <select class="chk" id="chk" name="chk">
+                            <option value="">Selecione</option>
+                            <option value="true">Exibir</option>
+                            <option value="false">Ocultar</option>
+                        </select>
+                    </div><!-- /row -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- quem somos -->
+    <section class="vspace-sm">
+        <div class="ls-list">
+            <header class="ls-list-header">
+                <div class="ls-list-image">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABs0lEQVRYR+1XTU6DUBAWAmvxBr2BegLxBLKAdfEG9iRyg+IaFvQE4gnkCN7AuoaA3zRPMq3A+8EYa9qkKeTNzzcz35uZWmeGnyiK4q7rHkndsqxVlmWpiSnLRCkIAs913XeuW9f1RVEUW117WgAQdYKol4jYG3KEMwKQ5nm+UgXyDYBwcjlkAI59FcMAUo7IVYfg9gDA+RUUX1WczJC5Bl+qL/09AGEY+ojymQ4RxQbfFO+7uuLZs22biHYucf7Rtm3M9fBM73fCzi2y0GdoFMAQqUC+heM48RSApmlSkPGNy3DSIhA1AEiTFkFlJUF5O60M/AkAInVrqr8sQjpHnZ/GGpJRBggAav6g4lzIlJxgXM8IgIZjqehxAtDlAE8DruM9v47GGUBzIg4okfAAQMKHkzEAaXEVBY4TgGi9a8UgSWyDa5gMyRtnQIcDaEQFn3SnPjA7AwYc6H2KRbVfPH6FAyzirdgL+iXVGIDGDZgU/d8AxJ+UJU/Bj3FApQSCrIuDWVCdZsGsPoA9MKHWqlICmQxsBbC1W+2U13KZUdPzSQBkFIwu8XNj6kCi94Jh5XOZT2Z6zzCRcRz+AAAAAElFTkSuQmCC"/>
+                </div>
+                <div class="ls-list-title">
+                    <h2 class="title-3">Quem somos?</h2>
+                </div>
+            </header>
+            
+            <div class="ls-list-content">
+                <div class="col-md-12 tons"> 
+                    <div class="row"> 
+                        <input name="about_us_title" class="form-control" placeholder="T&iacute;tulo" type="text" id="about_us_title">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ls-list-content">
+                <div class="col-md-12 tons"> 
+                    <div class="row"> 
+                        <textarea name="about_us" class="form-control" type="text" id="about_us"></textarea>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </section> 
+</div>

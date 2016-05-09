@@ -1,0 +1,168 @@
+/**
+ * Header
+ */
+ 
+.header {
+    
+    .logo-color{
+        height: 100px;
+        
+        img{
+            max-height: 100%;
+        }
+    }
+    
+    /* Menu Horizontal - INICIO */
+    .fundo2{
+        position: relative;
+        z-index: 999;
+    }
+    
+    .main-menu {
+        
+        .level1{
+            position: relative;
+            
+            > li{
+                border-left: 1px solid #fff;
+                float: left;
+                text-align: center;
+                width: 20%;
+                
+                &:hover{
+                    background: rgba(0,0,0,0.2);
+                }
+                
+                &:hover .level2{
+                    display: block;
+                }
+                
+                &:nth-child(2){
+                    border-left: none;
+                }
+            }
+            
+            .link-level1{
+                display: block;
+                font-size: 0;
+                text-transform: uppercase;
+                
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    height: 70px;
+                    margin-right: -1%;
+                    vertical-align: middle;
+                    width: 1%;
+                }
+                
+                > span{
+                    display: inline-block;
+                    font-size: 13px;
+                    max-height: 70px;
+                    max-width: 99%;
+                    overflow: hidden;
+                    vertical-align: middle;
+                }
+            }
+            
+            .level2{
+                display: none;
+                font-size: 0;
+                left: 0;
+                position: absolute;
+                text-align: left;
+                top: 100%;
+                width: 100%;
+                
+                > ul{
+                    background: rgba(0,0,0,0.2);
+                    padding: 15px 0 0;
+                    
+                    > li {
+                        display: inline-block;
+                        padding: 0 15px;
+                        vertical-align: top;
+                        width: 25%;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            
+            .link-level2{
+                border: 1px solid #000;
+                display: block;
+                font-size: 14px;
+                padding: 10px;
+            }
+            
+            .level3{
+                font-size: 12px;
+                padding: 10px;
+                
+                > ul {
+                    
+                    > li {
+                        margin-top: 5px;
+                        
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+            
+            .link-level3{
+                display: block;
+                
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    .logoBusca{
+        
+        @media screen and (max-width: 1024px){
+            height: 64px;
+            margin: 0;
+            
+            h1{
+                font-size: 0;
+                margin: 0;
+                overflow: hidden;
+            }
+            
+            #logotipo .logo-color{
+                display: block;
+                float: none;
+                height: 64px;
+                line-height: 64px;
+                padding-top: 0;
+                padding-left: 15px;
+                text-align: left;
+                
+                img{
+                    max-height: 35px;
+                }
+            }
+        }
+    }
+    
+    .wrapper-mobile-header{
+        
+        @media screen and (max-width: 1024px){
+            padding: 0;
+        }
+    }
+    
+    .menu-mobile2{
+        height: auto;
+        margin: 0;
+        padding: 15px;
+        position: relative;
+        width: 45%;
+        z-index: 100;
+    }
+}

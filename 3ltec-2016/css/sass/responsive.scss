@@ -1,0 +1,148 @@
+@media screen and (max-width: 1024px){
+    
+    .page-content .container{
+        padding: 0;
+    }
+    
+    .carrinho-tabs{
+        margin-top: 30px;
+    }
+    
+    #tabela_carrinho tr{
+        border: 1px solid #000;
+        padding: 15px;
+        position: relative;
+    }
+    
+    #tabela_carrinho tr:first-child{
+        display: none;
+    }
+    
+    #tabela_carrinho td{
+        position: static;
+    }
+    
+    #tabela_carrinho td:nth-child(4) .valores_carrinho:before{
+        content: 'Unidade: ';
+    }
+    
+    #tabela_carrinho td:nth-child(5) .valores_carrinho:before{
+        content: 'Total: ';
+    }
+    
+    .page-checkout_cart .bt-excluir{
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    
+    #menuVars{
+        margin-top: 30px;
+    }
+    
+    #cesta_produtos{
+        margin-top: 15px;    
+    }
+    
+    #cesta_produtos > .board {
+        margin: 0;
+    }
+    
+    .page-checkout_cart .caixa-produto{
+        clear: both;
+        padding: 0;
+    }
+    
+    #title{
+        padding: 0;
+        margin-top: 50px;
+    }
+    
+    #atualizaFormas .Forma1 > li{
+        padding: 0;
+    }
+    
+    #atualizaFormas .tablePags {
+        margin: 0;
+    }
+    
+    #atualizaFormas .tablePags td{
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+    }
+    
+    #atualizaFormas .tablePags td span {
+        float: none;
+        margin: 0;
+        text-align: left;
+        line-height: 10px;
+    }
+    
+    #atualizaFormas td:last-child {
+        display: none;
+    }
+    
+    .txt-forma-pagto .item-parcela{
+        font-size: 0;
+        display: block;
+        height: 30px;
+    }
+    
+    .txt-forma-pagto .item-parcela b,
+    .txt-forma-pagto .item-parcela strong {
+        font-size: 10px;
+    }
+    
+    .txt-forma-pagto .item-parcela strong {
+        text-align: right;
+        display: block;
+        padding-right: 15px;
+    }
+    
+    #pf_nome_cliente,
+    #endereco_cliente,
+    #cobranca_endereco,
+    #email_cliente,
+    #email_cliente2,
+    #razao_social,
+    #pj_nome_cliente{
+        width: 100%;
+    }
+    
+    #pf_data_nascimento{
+        min-width: 120px;
+    }
+    
+    #telefone_cliente{
+        min-width: 120px;
+    }
+    
+    #senha_cliente,
+    #senha_cliente2{
+        min-width: 180px;
+    }
+    
+    #complemento,
+    #cobranca_complemento{
+        width: 170px;
+    }
+    
+    .dif{
+        font-size: 10px;
+    }
+    
+    #email_cliente2_erro + br + label {
+        font-size: 12px;
+    }
+    
+    .page-register .Seguro{
+        position: static;
+        margin: 20px 0 0;
+    }
+    
+    .page-register .carrinho-heading{
+        margin-top: 20px;
+    }
+
+}

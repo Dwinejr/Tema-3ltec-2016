@@ -1,0 +1,218 @@
+@media screen and (max-width: 1024px){
+    
+    .page-checkout_payment .tit-detalhes-compra{
+        margin-top: 30px;
+    }
+    
+    .page-checkout_payment .tit-detalhes-compra .Seguro{
+        margin-bottom: 30px;
+        position: static;
+    }
+    
+    .page-checkout_payment .tit-detalhes-compra .board{
+        margin: 0;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra tr:first-child{
+        display: none;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra tr {
+        border: 1px solid #000;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra td {
+        border: none;
+        padding: 0px 15px;
+        text-align: left;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra td:first-child{
+        padding-top: 15px;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra td span,
+    .page-checkout_payment .caixa-detalhes-compra td span h3{
+        display: inline-block;
+        float: none;
+        font-size: 12px !important;
+        margin: 0;
+        text-align: left;
+        width: auto;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra .tit-nome-produto h4{
+        font-weight: 700;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra .tit-qtde:before {
+        content: 'Quantidade: ';
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra .tit-unitario:before{
+        content: 'Val. Unit.: ';
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra .tit-produto-total:before{
+        content: 'Val. Total.: ';
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    
+    .page-checkout_payment .caixa-frete th{
+        border: none;
+    }
+    
+    .page-checkout_payment .caixa-frete .valores_carrinho,
+    .page-checkout_payment .caixa-frete + tr + tr .valores_carrinho{
+        margin: 0;
+    }
+    
+    .page-checkout_payment .caixa-frete + tr + tr th > h3{
+        font-weight: 700;
+    }
+    
+    .page-checkout_payment .tit-frete,
+    .page-checkout_payment .caixa-frete + tr + tr th:first-child{
+        padding-top: 15px;
+        font-size: 14px;
+    }
+    
+    .page-checkout_payment .tit-valor-frete,
+    .page-checkout_payment .caixa-frete + tr + tr th:nth-child(2){
+        padding-bottom: 15px;
+    }
+    
+    .page-checkout_payment .caixa-frete + tr,
+    .page-checkout_payment .caixa-frete th:last-child,
+    .page-checkout_payment .caixa-frete + tr + tr th:last-child{
+        display: none;
+    }
+    
+    .page-checkout_payment .caixa-detalhes-compra .tit-altera-compra{
+        border-bottom: none;
+    }
+    
+        .page-checkout_payment .tit-altera-compra th{
+            padding-top: 15px;
+        }
+    
+    .page-checkout_payment .caixa-detalhes-compra .bt-altera-compra{
+        border-top: none;
+    }
+    
+        .page-checkout_payment .bt-altera-compra th{
+            padding-bottom: 15px;
+        }
+    
+    .page-checkout_payment .tit-altera-compra th{
+        border: none;
+    }
+    
+    .page-checkout_payment .escolha-forma-pagamento,
+    .page-checkout_payment .tit-destinatario,
+    .page-checkout_payment .tit-trocar-entrega{
+        display: none;
+    }
+    
+    .page-checkout_payment .tit-nome-destinatario,
+    .page-checkout_payment .tit-dados-entrega{
+        border: none;
+        font-size: 12px;
+        padding: 0;
+    }
+    
+    .page-checkout_payment .tit-dados-entrega + .board {
+        margin-top: 0;
+    }
+    
+    .page-checkout_payment .caixa-dados-entrega{
+        margin: 0;
+    }
+    
+    .page-checkout_payment .tit-entrega{
+        margin-top: 30px;
+        text-align: left;
+    }
+    
+    .page-checkout_payment .tit-entrega h3,
+    .page-checkout_payment .tit-dados-entrega h2.color{
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .page-checkout_payment .bt-altera-entrega:before {
+        content: 'Alterar Compra';
+        display: block;
+        margin-top: 30px;
+    }
+    
+    .page-checkout_payment #ProdBlock #ProdAbas .tit-tipo-pagamento{
+        border: 1px solid #000;
+        border-bottom: none;
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+    
+    .page-checkout_payment .lista-formas-pagamento li{
+        border: 1px solid #000;
+        margin: -1px 0 -1px;
+        padding: 15px;
+        position: relative;
+    }
+    
+    .page-checkout_payment .lista-formas-pagamento li .margin{
+        margin: 0;
+    }
+    
+    .page-checkout_payment .lista-formas-pagamento img {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
+    
+    .page-checkout_payment .lista-formas-pagamento .select {
+        width: 100%;
+    }
+    
+    .page-checkout_payment .observacao{
+        margin: 30px 0 0;
+        padding: 0 15px;
+    }
+    
+    .page-checkout_payment .observacao > h3{
+        font-weight: 700;
+    }
+    
+    .page-checkout_payment .observacao > br{
+        display: none;
+    }
+    
+    .page-checkout_payment #obs {
+        margin: 0;
+        width: 100% !important;
+    }
+    
+    .page-checkout_payment .page-checkout_payment .botao-commerce {
+        display: block;
+        float: none;
+        left: 0;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+    
+    .page-checkout_payment .finalizarBT{
+        position: static;
+    }
+    
+    .page-checkout_payment .carrinho-tabs{
+        margin: 0 0 20px;
+    }
+}

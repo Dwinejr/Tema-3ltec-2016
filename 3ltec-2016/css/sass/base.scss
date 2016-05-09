@@ -1,0 +1,219 @@
+/**
+ * Base / Settings
+ */
+
+$primary-color: #25282A;
+$primary-font: "Oswald", sans-serif;
+
+body {
+    background: #fff;
+    color: $primary-color;
+}
+
+// adaptive images
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+// vertical spaces
+.vspace-xs,
+.vspace-sm,
+.vspace-lg {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.vspace-sm {
+    margin-bottom: 10px;
+}
+
+.vspace-lg {
+    margin-bottom: 20px;
+}
+
+.icon-breadcrumb{
+    
+    &:before{
+        content: '/';
+        font-size: 14px;
+        color: #000;
+    }
+}
+
+#NavLogoTray{
+    display: block;
+    overflow: hidden;
+}
+
+.cloud-zoom-big{
+    left: 100% !important;
+    margin: 0 !important;
+}
+
+
+    
+.page-login .carrinho-heading{
+    display: none;
+}
+
+.page-login .carrinho-tabs{
+    margin-bottom: 30px;
+}
+
+#implantation-news-email,
+#implantation-news-nome{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news.implantation{
+    height: auto;
+    float: none;
+}
+
+.filtros{
+    
+    @media screen and (max-width: 1024px){
+        margin-bottom: 15px;
+    }
+}
+
+.lista-formas-pagamento > li{
+    position: relative;
+    border: 1px solid #ccc;
+    margin-right: 0;
+}
+
+.page-checkout_payment .observacao{
+    margin: 30px 0 0;
+    padding: 0 15px;
+}
+
+.page-checkout_payment .observacao > h3{
+    font-weight: 700;
+}
+
+.page-checkout_payment .observacao textarea{
+    width: 100% !important;
+}
+
+.page-checkout_payment .observacao > br{
+    display: none;
+}
+    
+.page-central_cliente,
+.page-central_anteriores,
+.page-central_detalhe_pedido,
+.page-central_confirmar_pagamento,
+.page-central_rastrear,
+.page-central_troca,
+.page-central_senha,
+.page-central_comentarios,
+.page-central_lista_espera,
+.page-navegacao_visitados{
+    .page-content{
+        padding: 20px 0;
+    }
+}
+
+.board.central-menu + .container{
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    /*------------------------------------*\
+        FINISH SHOPPING
+    \*------------------------------------*/
+    .page-central_cliente,
+    .page-central_anteriores,
+    .page-central_detalhe_pedido,
+    .page-central_confirmar_pagamento,
+    .page-central_rastrear,
+    .page-central_troca,
+    .page-central_senha,
+    .page-central_comentarios,
+    .page-central_lista_espera,
+    .page-navegacao_visitados{
+        
+        #ProdBlock{
+            display: none;
+        }
+        
+        .sidebar-left{
+            display: none;
+        }
+        
+        .icoPai{
+            display: none;
+        }
+        
+        .icoFilho{
+            border: none;
+            width: 50%;
+        }
+        
+        .breadcrumb{
+            margin-top: 2em;    
+        }
+        
+        .Mapa{
+            float: right;
+            margin: 2em 0;
+            position: static;
+            display: none;
+        }
+        
+        .Pedidos,
+        .tablePage{
+            
+            tr{
+                background: none;
+                display: block;
+                
+                &:first-child{
+                    display: none;   
+                }
+            }
+            
+            td{
+                border: none;
+                border-left: 1px solid #000;
+                border-right: 1px solid #000;
+                display: block;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+                
+                &:first-child{
+                    border-top: 1px solid #000;
+                    margin-top: 2em;
+                }
+                
+                &:last-child{
+                    border-bottom: 1px solid #000;
+                }
+                
+                h4{
+                    margin: 0;
+                }
+            }
+            
+        }
+        
+        #modificar_pagamento{
+            float: right;
+            margin-top: 1em;
+            margin-right: 1em;
+        }
+        
+    }
+    
+    .page-central_troca{
+        
+        .tablePage tr:first-child{
+            display: block;
+        }
+        
+    }
+}

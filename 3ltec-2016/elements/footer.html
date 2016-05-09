@@ -1,0 +1,173 @@
+{% set linkReplace = {
+'links.home': links.home,
+'links.contact': links.contact,
+'links.company': links.company,
+'links.info': links.info,
+'links.info_buy': links.info_buy,
+'links.security': links.security,
+'links.warranty': links.warranty,
+'links.send': links.send,
+'links.payment': links.payment,
+'links.newsletter': links.newsletter,
+'links.map': links.map,
+'links.compare': links.compare,
+'links.register': links.register
+} %}
+<footer class="footer">
+	
+	<div class="agrupa-news">
+		<div id="page" class="container ">
+			<div class="row">
+				<div class="news nospace" >
+					<div class="sobre">
+						{% if settings.about_us_title %}
+						<span class="texto">{{ settings.about_us_title }}</span>
+						{% endif %}
+						<span class="mensagem">{{ settings.about_us }}</span>
+					</div>
+					<div class="caixaNews">{{ _view.element('snippets/newsletter') }}</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+	
+	
+	
+	<div id="page" class="container">
+		<div class="row">
+			<div class="listaLinks pr col-sm-3">
+				<h4 class="footer-title">Institucional</h4>
+				<ul>
+					{% for custom in pages.custom %}
+						<li>
+							<a href="{{ custom.url }}">{{ custom.name }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+ 			
+ 			{% if settings.exibe_links == 'true' %}
+				<div class="listaLinks duvidas col-sm-3">
+					<h4 class="footer-title">{{ settings.titulo_extras }}</h4>
+					<ul>
+						<li>
+							<a href="{{ settings.extra_links }}" target="_blank">{{ settings.texto_extra_links }} </a>
+						</li>
+						<li>
+							<a href="{{ settings.extra_links2 }}" target="_blank">{{ settings.texto_extra_links2 }} </a>
+						</li>
+						<li>
+							<a href="{{ settings.extra_links3 }}" target="_blank">{{ settings.texto_extra_links3 }} </a>
+						</li>
+						<li>
+							<a href="{{ settings.extra_links4 }}" target="_blank">{{ settings.texto_extra_links4 }} </a>
+						</li>
+						<li>
+							<a href="{{ settings.extra_links5 }}" target="_blank">{{ settings.texto_extra_links5 }} </a>
+						</li>
+					
+					</ul>
+				</div>
+			{% endif %}
+			
+			<div class="listaLinks duvidas col-sm-3">
+				<h4 class="footer-title">formas de pagamento</h4>
+				<ul>
+					<li class="payment-forms">   
+						{% for payment in paymentMethods.order %}
+							<img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+						{% endfor %}
+						
+						{% for payment in paymentMethods.credit %}
+							<img src="{{ payment.thumbnail.url }}" alt="{{ payment.display_name }}">
+						{% endfor %}
+					</li>
+					
+					{% if settings.exibe_social == 'true' %}
+						<li>
+						{% if settings.redeon1 == 'true' %}
+							<span class="youtube">
+								<a href="{{ settings.link_rede1 }}" target="_blank" rel="external">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB2ElEQVRIS+2W7VXCQBBFSQdagXQgHRg6gAoMFagViBUIFRg7wAqIHWAFYgXSQbw3ZxMDBAjCT/ecd7KZ3Z03s/ORRJ2Gkef5AvEqiqKY+Yx5j3m3ae8hWbSDIEH+Ai7BN3iAYHJIWdN6I4EbsXzFQ+tvA5Ee3IEFZFPWY+bKMvcgezqWYMyBR/DK4QSFy6BMxa6pvJzP2dNo7D4PPDwHQ87OIMiZ94NyrXachaAPQfZPsJUAIUuMQXlF1oZxMLhD0APP4ANc/yXIKkpAyuElhBfMB8A0lcxUNshLSY3TlpUItrKIQyq+atrcQvalMfV9FUGw0OrVylOGxTmCyEL99QCClHer9hxjCsH9JoGMExbGJUMt0BWpwUTuHqt817BR2sfWPDBDvL832VFic7sBZsuxBJ0yq+oxkMDxHtp0FghTPQO6rIc9yCU1q/SkCwZmVt2ztgSZV8ZBn34byqekelsOjbGjjkJLae3BLgIVijpBHIwpbuJUDzYJ9KisnYL43ATqNKv86BTZdSxBwoG0FgOL0bSOQRfoQQLG4HMXwTK4aZ8pMgaYKR4s35VZqSrNgkLnKvbddTPMlqF8rQ7ctK943N92VD8Ja82OK9BS8ddmZ+u2+1Z/ID+51EwomWXhXQAAAABJRU5ErkJggg=="/>
+								</a>
+							</span> 
+						{% endif %}
+						
+						{% if   settings.redeon2 == 'true' %}
+							<span class="twitter">
+								<a href="{{ settings.link_rede2 }}" target="_blank" rel="external">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABk0lEQVRIS7WVj1HCMBSHyQSygWwgTiBOIE5gmUCdQNxAJ7BsgBNYN5ANcAJhgvr7uCRX2rRNuJK7d4Tk5fe99/KnZnTmZs6sPzoZUJblTME9yCaynWxtjFm5gDU/pn8A6M+Tfgo5/MRkJP/citfdWb+UAb+V3tQBmLi0g50QiSPw0hPI3kLGDlDaBaS6EHndJiAAPhc9gK3mKdG9AzBABq4BeBaIcd9s3b96xJkmg7nWFw6Qa4ANqzdAzH3LeZcAeJX/EjEHIB2i7Uqd0uAzjcigASDKPxmnaYjGPqLpMyjUvxlC2WpwRNH0gEz9j4EAe4kfLpkH0Om4PKncTwHmDYCFsAdY9cimAnx56hlMNMDGXMl8ionqHOdZdc3RY6cyvWnyMVG06n5df88ar2nkWxOKgZtPgEct+FwLQrlINfZkrSSehaihDKj/nYxoYvbiXeKtF9QoWo4UG0vjGSDyGOFf+WXuQrXtm3uLSA+Luc0b+eWheveWqFJ7twes4ZHjI8Qvn8VtW7S9gJSFsb4nf/RjAf/cqY+gnU91TAAAAABJRU5ErkJggg=="/>
+								</a>
+							</span>
+						{% endif %}
+						
+						{% if   settings.redeon3 == 'true' %}
+							<span class="instagram">
+								<a href="{{ settings.link_rede3 }}" target="_blank" rel="external">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABoElEQVRIS9WWC1HDQBCGiQJAAUEBoIDgoCggDgAFJAoAB0UBddDioCggVQAoCP+X2cscSS4PWphhZ25yj93/39ddG+1JyrLM9LnSiFnvQAphzKMoyiOBP2hxvQPQLoiKALajLQg+Zbv27A80P7F1AUG5BTimuVJBimsRJIQVyW8RrIR9/q8JJqeIQs41Fpbomb6pxr7Gh53xRU41OK9kTA1epZeokA6gMlQh6RYIq1yHZIhgg0dNcAdmJKQj2OY+AZ7eWIj3BnIrcC5iUESCTa2vOYTYtNr0RWBJw+BCe6sBgkTnS9Op7oQwsGm16Z8RtDyakKJLRbAYioDueDdQOud4oMhv0sEGOUS3lwCtxgtL0fCs8CORTqz1swZ9jzxJJzX7cA1MAY+a7TfXniMBnMvkPOcixi7SwQiMBM8AdU+vH4A/567MBF4/2aMIvEjocwbPQlMetZF13PL+FHW5Kq8S0mBnRd/9CEWwltFZKA9T9ps/OBTOvSXk8dujNgXYdCm866wNb1GmjbsfAI0xySMrJiSpF8kY4z4dOou/LdkX/OwYk0iNkkkAAAAASUVORK5CYII="/>
+								</a>
+							</span>
+						{% endif %}
+						
+						{% if   settings.redeon4 == 'true' %}
+							<span class="gplus">
+								<a href="{{ settings.link_rede4 }}" target="_blank" rel="external">
+									<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACDklEQVRIS52VjVHDMAyFyQTABJQJgAlIN4AJCBPQTkCYgHYCygbdgHYCygSUDcoE4X05uac4zs/hO10S2dLTkyUlO0msqqomUj9JriV56ox0P5Iiy7JNx36tzuJNOV9gKCklOwlg6E7t7FLPNXtyfuhz3gKQ85WUD5IbGeO8XtLDhEgBwenU7/eBHBnICVG/SbYyzmMjt8/WRmemQ9E3GMgBEV91ARgToq9TJYBWelOAnkFlB5IMDIA03do50sR370oBHGR4nrISy1L65/8y2MvwwhzfC4RKaSyrMMq3k2Vs4xkco9Mh7oMUNMpQAARxJslTVaR90vyiPXzVq3FRrkzZAwQme2u8V0C7nGMwCGCHCj2RcJmedaM/4nSMAvBGFvm36Vp5twaEWVi5XvYm6L56azkCwCDV4YyRsGDNjAKEtRtsFteAwcmj7mUVp4fvUSnSIaqESJg/QSaRw4VA5jFIL4ClgyYqJFtJPTGdk9KAO5l0AmjjTlYMOlLGjG81maUAkLqTtTo73jPLLPJPKUnNXM79pbVS7ceFNnvLFmMAfFSXNFbLa6SwVKAdHHgAbFxuByOyVBEEjCdDf7WYQWOOpJi43ljK+WyIbbgDqiX8c2cy5L+byj9Rf5BaCQNv3D/ZWp7KCeOaFIQy5T23lBR6vkvKMc6J0I9roqNccUKDBUa/eochgOsxReCp/wHxn/oz1F0J6gAAAABJRU5ErkJggg=="/>
+								</a>
+							</span>
+						{% endif %}
+						</li>
+					{% endif %}
+				</ul>
+			</div>
+				
+			<div class="likebox col-sm-12 col-md-3">
+				{{ settings.like_box }}
+			</div>
+		</div>
+
+		<div class="novo-container row">
+			
+			{% if settings.exibe_envio == 'true' %}
+				<div class="listaLinks duvidas col-sm-4">
+					<h4 class="footer-title">formas de entrega</h4>
+					<ul>
+						<li>   
+							<img src="{{ themePath }}{{ settings.img_entrega }}" alt="Formas de pagamento" />
+						</li>
+					</ul>
+				</div>
+			{% endif %}
+			
+			{% if seals.ebit or seals.hackersafe %}
+				<div class="listaLinks duvidas col-sm-4">
+					<h4 class="footer-title">Seguran&ccedil;a</h4>
+					<ul class="row">
+						{% if seals.hackersafe %}
+						<li class="col-md-5 loja-protegida">{{ seals.hackersafe }}</li>
+						{% endif %}
+						
+						{% if seals.ebit %}
+						<li class="col-md-5 ebit">{{ seals.ebit }}</li>
+						{% endif %}
+					</ul>
+				</div>
+			{% endif %}
+			
+		</div>
+			
+		<div class="dados-rodape-info col-sm-12">
+			{{ Translation('ag_mensagem_rodape') }}
+		</div>
+	</div>
+</footer>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=1541317606114357&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

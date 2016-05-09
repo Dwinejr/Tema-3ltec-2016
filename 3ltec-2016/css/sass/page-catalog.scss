@@ -1,0 +1,11 @@
+.page-catalog,
+.page-search{
+    
+    .galeria > ul > li:nth-child(4n+1){
+        clear: both;
+    }
+    
+    .filtros{
+        margin-left: 15px;
+    }
+}
