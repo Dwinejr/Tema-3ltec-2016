@@ -15,19 +15,6 @@
             
         </div>
         
-        <div class="banners">
-            <div class="banner1  col-sm-4">
-     
-                {% if banner.extra2 %}{{ banner.extra2 }}{% endif %}
-            </div>
-            <div class="banner2  col-sm-4">
-                {% if banner.extra3 %}{{ banner.extra3 }}{% endif %}
-            </div>
-            <div class="banner3  col-sm-4">
-                {% if banner.extra4 %}{{ banner.extra4 }}{% endif %}
-            </div>
-        </div>
-        
         <div class="slider listaVendidos">
             {% set vendidos = Products({ 
                 'filter': 'promotion',

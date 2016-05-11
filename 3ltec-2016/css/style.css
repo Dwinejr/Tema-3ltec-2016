@@ -53,10 +53,18 @@ text-rendering: auto;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-a,
-a:hover {
+a {
 font-family: 'Montserrat', sans-serif;
-color: #040404;
+color: #040404 !important;
+}
+a:hover {
+color: #d90000 !important;
+}
+a:visited {
+color: #040404 !important;
+}
+a:active {
+color: #040404 !important;
 }
 .left {
 float: left;
@@ -222,7 +230,7 @@ padding: 0;
 }
 .faixaUsuario {
 /* border-top: solid 3px #343434; */
-min-height: 223px;
+min-height: 0px;
 }
 .logoBusca .brand {
 height: 52px;
@@ -2556,7 +2564,8 @@ color: #414141;
 }
 #preco .PrecoPrincipal {
 font-size: 26px;
-color: #414141;
+color: #00A01C;
+font-weight: bold;
 }
 #preco .currency {
 border: 0;
@@ -2712,6 +2721,12 @@ width: 100%;
 .board_htm.description table {
 width: inherit;
 margin: inherit;
+}
+.board_htm.description p {
+line-height: 1.8 !important;
+}
+.board_htm p {
+margin: 12px 0 0 !important;
 }
 .tablePage tr:nth-child(even),
 table tr:nth-child(even),
